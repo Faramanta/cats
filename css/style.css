@@ -112,6 +112,9 @@ body *, html * {
     overflow: hidden;
     white-space: nowrap;
 }
+.card__product--hover {
+    display: none;
+}
 .card__ttl2 {
     font-size: 48px;
     color: #000;
@@ -226,6 +229,13 @@ body *, html * {
     background: -webkit-linear-gradient(315deg, transparent 30px, #e62e7a 0);
     background: -o-linear-gradient(315deg, transparent 30px, #e62e7a 0);
     background: linear-gradient(135deg, transparent 30px, #e62e7a 0);
+}
+.card__block.selected.hover .card__product--default {
+    display: none;
+}
+.card__block.selected.hover .card__product--hover {
+    display: block;
+    color: #e62e7a;
 }
 .card__block.selected.hover .card__weight {
     background: #e62e7a;
