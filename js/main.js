@@ -1,6 +1,15 @@
 var card = document.querySelectorAll('.js-card-status');
 var cardBlock = document.querySelectorAll('.card__block');
 
+(function(ELEMENT) {
+    ELEMENT.matches = ELEMENT.matches || ELEMENT.mozMatchesSelector || ELEMENT.msMatchesSelector || ELEMENT.oMatchesSelector || ELEMENT.webkitMatchesSelector;
+    ELEMENT.closest = ELEMENT.closest || function closest(selector) {
+        if (!this) return null;
+        if (this.matches(selector)) return this;
+        if (!this.parentElement) {return null}
+        else return this.parentElement.closest(selector)
+    };
+}(Element.prototype));
 
 for (var i = 0; i < card.length; i++) {
     card[i].addEventListener('click', function (e) {

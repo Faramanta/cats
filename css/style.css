@@ -196,7 +196,16 @@ body *, html * {
     white-space: nowrap;
 }
 .card__bot-text a {
+    position: relative;
     color: #1698d9;
+    display: inline-block;
+}
+.card__bot-text a:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
     border-bottom: 1px dashed #1698d9;
 }
 .card__block:hover .card  {
